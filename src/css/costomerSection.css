@@ -8,11 +8,27 @@
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 800px) {
+  .costomer__section__child {
+    flex-direction: column;
+    gap: 5rem;
+  }
+}
 .costomer__section__child h1 {
   font-size: 10rem;
 }
+@media (max-width: 800px) {
+  .costomer__section__child h1 {
+    font-size: 8rem;
+  }
+}
 .costomer__section__child h2 {
   font-size: 4.5rem;
+}
+@media (max-width: 800px) {
+  .costomer__section__child h2 {
+    font-size: 3.5rem;
+  }
 }
 .costomer__section__child .info {
   display: flex;
@@ -22,9 +38,21 @@
   width: 50%;
   gap: 2rem;
 }
+@media (max-width: 800px) {
+  .costomer__section__child .info {
+    align-items: center;
+    width: 100%;
+  }
+}
 .costomer__section__child .info p {
   width: 27rem;
   text-align: start;
+}
+@media (max-width: 800px) {
+  .costomer__section__child .info p {
+    width: 100%;
+    text-align: center;
+  }
 }
 .costomer__section__child .info button {
   font-size: 1rem;
@@ -47,4 +75,9 @@
 }
 .service__info img {
   width: 15rem;
+}
+@media (max-width: 800px) {
+  .service__info img {
+    width: 10rem;
+  }
 }

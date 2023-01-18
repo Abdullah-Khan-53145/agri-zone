@@ -95,7 +95,11 @@ function Header({ color, setColor }) {
           <img src="/imgs/close.svg" alt="" className={`ham__menu `} />
           <ul>
             <li>Home</li>
-            <li>About</li>
+            <li>
+              <a href="#about" style={{ color: "black" }}>
+                About
+              </a>
+            </li>
             <li>Contact</li>
           </ul>
         </div>

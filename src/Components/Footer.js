@@ -4,7 +4,7 @@ import Fade from "react-reveal";
 function Footer() {
   return (
     <>
-      <div className="footer__section__main">
+      <div className="footer__section__main" id="about">
         <div className="footer__section__child child farmer">
           <Fade>
             <div className="farmer_explaination__logos">
@@ -25,7 +25,7 @@ function Footer() {
                 producers and consumers.
               </p>
               <div className="button__farmer">
-                <button className="primary-btn">Contact us</button>
+                <button className="primary-btn">CONTACT US</button>
               </div>
             </div>
           </Fade>
