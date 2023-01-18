@@ -1,0 +1,55 @@
+.farmer__section__main {
+  color: #3a231b;
+  min-height: 100vh;
+  display: flex;
+}
+.farmer__section__main .explaination__logos {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+.farmer__section__main .explaination__logos img {
+  width: 65%;
+}
+
+.farmer__section__child {
+  display: flex;
+  justify-content: space-between;
+}
+.farmer__section__child h1 {
+  font-size: 7rem;
+}
+.farmer__section__child h2 {
+  font-size: 2.7rem;
+}
+.farmer__section__child .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  gap: 2rem;
+}
+.farmer__section__child .info p {
+  width: 30rem;
+  text-align: start;
+}
+.farmer__section__child .info .button__farmer {
+  width: 60%;
+  display: flex;
+}
+.farmer__section__child .info .button__farmer button {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.service__info {
+  padding: 1;
+}
+.service__info p {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.service__info img {
+  width: 15rem;
+}

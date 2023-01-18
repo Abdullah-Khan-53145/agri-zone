@@ -1,0 +1,57 @@
+@import "colors";
+.farmer__section__main {
+  color: $skin-text;
+  min-height: 100vh;
+  display: flex;
+  .explaination__logos {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    img {
+      width: 65%;
+    }
+  }
+}
+.farmer__section__child {
+  display: flex;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 7rem;
+  }
+  h2 {
+    font-size: 2.7rem;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    gap: 2rem;
+    p {
+      width: 30rem;
+      text-align: start;
+    }
+    .button__farmer {
+      width: 60%;
+      display: flex;
+
+      button {
+        font-size: 1rem;
+        font-weight: 200;
+      }
+    }
+  }
+}
+
+.service__info {
+  padding: 1;
+  p {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  img {
+    width: 15rem;
+  }
+}

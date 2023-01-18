@@ -1,0 +1,50 @@
+.costomer__section__main {
+  color: #24203f;
+  min-height: 100vh;
+  display: flex;
+}
+
+.costomer__section__child {
+  display: flex;
+  justify-content: space-between;
+}
+.costomer__section__child h1 {
+  font-size: 10rem;
+}
+.costomer__section__child h2 {
+  font-size: 4.5rem;
+}
+.costomer__section__child .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 50%;
+  gap: 2rem;
+}
+.costomer__section__child .info p {
+  width: 27rem;
+  text-align: start;
+}
+.costomer__section__child .info button {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.explaination__logos {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.service__info {
+  padding: 1;
+}
+.service__info p {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.service__info img {
+  width: 15rem;
+}

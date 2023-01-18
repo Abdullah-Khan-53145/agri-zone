@@ -50,10 +50,10 @@ html {
 }
 
 .main_background {
-  background-color: #ff7d7d;
   position: fixed;
   inset: 0;
   z-index: -1;
+  transition: background 0.5s;
 }
 
 @media (max-width: 1890px) {

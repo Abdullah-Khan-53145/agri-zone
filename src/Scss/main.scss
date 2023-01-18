@@ -44,10 +44,10 @@ html {
   border-bottom-right-radius: 2rem;
 }
 .main_background {
-  background-color: $pink;
   position: fixed;
   inset: 0;
   z-index: -1;
+  transition: background 0.5s;
 }
 @media (max-width: 1890px) {
   html {

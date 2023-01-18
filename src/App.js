@@ -1,13 +1,24 @@
 import "./App.css";
 import Home from "./Pages/Home";
-function App() {
-  const color = "#ff7d7d";
+import { connect } from "react-redux";
+function App({ color }) {
+  console.log(color.colors[color.index]);
   return (
-    <div className="App" style={{ backgroundColor: "#ff7d7d" }}>
-      <div className="main_background"></div>
+    <div className="App">
+      <div
+        className="main_background"
+        style={{
+          backgroundColor: `${color.colors[color.index]}`,
+        }}
+      ></div>
       <Home />
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  color: state.colorState,
+});
+const dispatchStateToProps = (dispatch) => ({});
+
+export default connect(mapStateToProps, dispatchStateToProps)(App);

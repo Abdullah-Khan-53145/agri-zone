@@ -1,0 +1,49 @@
+@import "colors";
+@import "colors";
+.wholeseller__section__main {
+  color: $green-text;
+  min-height: 100vh;
+  display: flex;
+  .explaination__logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    img {
+      width: 100%;
+    }
+  }
+}
+.wholeseller__section__child {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 5.1rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    gap: 2rem;
+    p {
+      width: 30rem;
+      text-align: start;
+    }
+    .button__farmer {
+      width: 65%;
+      display: flex;
+
+      button {
+        font-size: 1rem;
+        font-weight: 200;
+      }
+    }
+  }
+}

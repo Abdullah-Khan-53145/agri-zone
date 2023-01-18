@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { connect } from "react-redux";
+import { setColorAPI } from "../actions";
 import "../css/header.css";
-function Header() {
+function Header({ color, setColor }) {
   const [selectedOption, setSelectedOption] = useState("Login as");
   const [isAnimate, setIsAnimate] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -14,20 +16,76 @@ function Header() {
   const animateHeader = () => {
     if (window.scrollY > 100) {
       setIsAnimate(true);
-      console.log(isAnimate);
-    } else {
+    }
+    if (
+      window.scrollY >
+      document.querySelector(".costomer__section__main").offsetTop - 200
+    ) {
+      setColor(1);
+      console.log(color);
+    }
+    if (window.scrollY < 400) {
+      setColor(0);
+    }
+    if (
+      window.scrollY >
+      document.querySelector(".farmer__section__main").offsetTop - 200
+    ) {
+      setColor(2);
+      console.log(color);
+    }
+    if (
+      window.scrollY <
+        document.querySelector(".farmer__section__main").offsetTop - 200 &&
+      window.scrollY >
+        document.querySelector(".costomer__section__main").offsetTop - 200
+    ) {
+      setColor(1);
+    }
+    if (
+      window.scrollY >
+      document.querySelector(".wholeseller__section__main").offsetTop - 200
+    ) {
+      setColor(3);
+      console.log(color);
+    }
+    if (
+      window.scrollY <
+        document.querySelector(".wholeseller__section__main").offsetTop - 200 &&
+      window.scrollY >
+        document.querySelector(".farmer__section__main").offsetTop - 200
+    ) {
+      setColor(2);
+    }
+    if (
+      window.scrollY >
+      document.querySelector(".footer__section__main").offsetTop - 200
+    ) {
+      setColor(4);
+      console.log(color);
+    }
+    if (
+      window.scrollY <
+        document.querySelector(".footer__section__main").offsetTop - 200 &&
+      window.scrollY >
+        document.querySelector(".wholeseller__section__main").offsetTop - 200
+    ) {
+      setColor(3);
+    }
+    if (window.scrollY < 100) {
       setIsAnimate(false);
-      console.log(isAnimate);
     }
   };
   useEffect(() => {
     window.addEventListener("scroll", animateHeader);
+    console.log(color);
     return () => window.removeEventListener("scroll", animateHeader);
   });
 
   return (
     <header
       className={`header__main main ${isAnimate ? "header_animate" : ""}`}
+      style={{ background: color.colors[color.index] }}
     >
       <div className="header__main__child child">
         <div
@@ -65,7 +123,7 @@ function Header() {
                 Farmer
               </option>
               <option className="header__dropdown-option" value="Wholeseller">
-                Wholeseller
+                Wholesaler
               </option>
               <option className="header__dropdown-option" value="Customer">
                 Customer
@@ -77,5 +135,11 @@ function Header() {
     </header>
   );
 }
+const mapStateToProps = (state) => ({
+  color: state.colorState,
+});
+const dispatchStateToProps = (dispatch) => ({
+  setColor: (payload) => dispatch(setColorAPI(payload)),
+});
 
-export default Header;
+export default connect(mapStateToProps, dispatchStateToProps)(Header);
