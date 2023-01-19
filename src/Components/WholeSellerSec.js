@@ -3,10 +3,11 @@ import Fade from "react-reveal";
 import { setColorAPI } from "../actions";
 import { connect } from "react-redux";
 import "../css/wholesellersec.css";
+import { Link } from "react-router-dom";
 
 function WholeSellerSec() {
   return (
-    <div className="wholeseller__section__main main">
+    <div className="wholeseller__section__main main" id="wholesaler">
       <div className="wholeseller__section__child child farmer">
         <Fade>
           <div className="explaination__logos">
@@ -32,7 +33,9 @@ function WholeSellerSec() {
               customers.
             </p>
             <div className="button__farmer">
-              <button className="primary-btn">LOGIN AS WHOLESALER</button>
+              <Link to="/wholesaler/log-in" className="primary-btn">
+                LOGIN AS WHOLESALER
+              </Link>
             </div>
           </div>
         </Fade>

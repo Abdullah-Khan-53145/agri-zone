@@ -3,15 +3,16 @@ import Fade from "react-reveal";
 import { setColorAPI } from "../actions";
 import { connect } from "react-redux";
 import "../css/farmerhero.css";
+import { Link } from "react-router-dom";
 
 function FarmerHero() {
   return (
-    <div className="farmer__section__main main">
+    <div className="farmer__section__main main" id="customer">
       <div className="farmer__section__child child farmer">
         <Fade>
-        <div className="explaination__logos">
-          <img src="/imgs/sec-3-img 1.png" alt="" />
-        </div>
+          <div className="explaination__logos">
+            <img src="/imgs/sec-3-img 1.png" alt="" />
+          </div>
         </Fade>
         <Fade bottom>
           <div className="info">
@@ -30,7 +31,9 @@ function FarmerHero() {
               informed purchasing decisions.
             </p>
             <div className="button__farmer">
-              <button className="primary-btn">LOGIN AS CUSTOMER</button>
+              <Link to="/customer/log-in" className="primary-btn">
+                LOGIN AS CUSTOMER
+              </Link>
             </div>
           </div>
         </Fade>

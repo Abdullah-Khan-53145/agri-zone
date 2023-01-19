@@ -12,13 +12,16 @@ li {
 a {
   text-decoration: none;
 }
-body {
+body,
+select,
+textarea {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
 }
 .App {
   position: relative;

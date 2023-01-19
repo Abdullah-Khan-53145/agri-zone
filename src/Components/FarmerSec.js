@@ -3,6 +3,7 @@ import "../css/costomerSection.css";
 import { connect } from "react-redux";
 import { Fade } from "react-reveal";
 import { setColorAPI } from "../actions";
+import { Link } from "react-router-dom";
 function CostomerSection({ color, setColor }) {
   const services = [
     "Gourmet offerings",
@@ -12,7 +13,7 @@ function CostomerSection({ color, setColor }) {
   ];
 
   return (
-    <div className="costomer__section__main main">
+    <div className="costomer__section__main main" id="farmer">
       <div className="costomer__section__child child">
         <Fade bottom>
           <div className="info">
@@ -26,7 +27,9 @@ function CostomerSection({ color, setColor }) {
               and providing a direct link between producers and consumers for
               fresher, more responsibly-sourced products
             </p>
-            <button className="primary-btn">LOGIN AS FARMER</button>
+            <Link to="/farmer/log-in" className="primary-btn">
+              LOGIN AS FARMER
+            </Link>
           </div>
         </Fade>
         <div className="explaination__logos">

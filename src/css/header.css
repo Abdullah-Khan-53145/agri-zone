@@ -169,7 +169,7 @@
   height: 8.5rem;
   -o-object-fit: contain;
      object-fit: contain;
-  transform: translateY(40%);
+  transform: translateY(30%);
   transition: 0.5s;
 }
 
@@ -214,5 +214,123 @@
     display: block;
     width: 4rem;
     height: 4rem;
+  }
+}
+
+.user__header__info {
+  display: flex;
+  gap: 3rem;
+}
+@media (max-width: 500px) {
+  .user__header__info {
+    gap: 1rem;
+  }
+}
+.user__header__info .user__profile__pic {
+  width: 3rem;
+  height: 3rem;
+  transition: 0.5s;
+  position: relative;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.user__header__info .user__profile__pic .dropdown__logout {
+  background-color: white;
+  height: 45%;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  display: none;
+  -webkit-animation: dropdown 0.3;
+          animation: dropdown 0.3;
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+}
+.user__header__info .user__profile__pic .dropdown__logout .pointer {
+  position: absolute;
+  left: 40%;
+  top: -0.5rem;
+  transform: rotate(45deg);
+  height: 1rem;
+  width: 1rem;
+  background-color: white;
+}
+.user__header__info .user__profile__pic .logout__button {
+  position: absolute;
+  padding-top: 3.7rem;
+  min-width: 3rem;
+  min-height: 3rem;
+  top: 0;
+  display: flex;
+  align-items: flex-end;
+}
+.user__header__info .user__profile__pic .logout__button:hover .dropdown__logout {
+  display: flex;
+  transform: translateY(0);
+  opacity: 1;
+}
+.user__header__info .user__profile__pic .logout__button button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+.user__header__info .user__profile__pic img {
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: 0.5s;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.user__header__info .cart__icon {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.user__header__info .cart__icon svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.user__header__info .cart__icon span {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  background-color: black;
+  color: white;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 0.7rem;
+}
+
+@-webkit-keyframes dropdown {
+  0% {
+    opacity: 0;
+    transform: translate(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%);
+  }
+}
+
+@keyframes dropdown {
+  0% {
+    opacity: 0;
+    transform: translate(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0%);
   }
 }
